@@ -1,0 +1,10 @@
+<!-- pages/bookRead/index.wxml -->
+<scroll-view wx:if="{{!showLoading}}" scroll-y="true" style="height:100%">
+    <view class="content" hover-class="none" hover-stop-propagation="false">
+        <view wx:if="{{nowRead>0}}" class="last" bindtap="lastSec" selectable="false" space="false" decode="false">
+            {{"<"}}上一章
+        </view>
+        <rich-text class="book-detail" nodes="{{content}}"></rich-text>
+        <button bindtap="loadMore" type="primary" style="margin:20rpx">下一章</button>
+    </view>
+</scroll-view>

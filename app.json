@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/recommend/index",
+    "pages/logs/logs",
+    "pages/detail/detail",
+    "pages/bookrack/index",
+    "pages/bookDirectory/index",
+    "pages/bookRead/index"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/recommend/index",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "书城"
+      },
+      {
+        "pagePath": "pages/bookrack/index",
+        "text": "书架"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#42BD56",
+    "navigationBarTitleText": "好好看书",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,12 @@
+<view class="recommend-home">
+    <scroll-view scroll-y="true" bindscrolltolower="lodaMore" style="height:100%">
+        <view wx:for="{{novelList}}" wx:key="{{item.bookname}}" class="recommend-item" bindtap="goDetail" data-book="{{item}}">
+            <image class="book-cover" src="{{item.cover}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+            <view class="book-title">{{item.title}}</view>
+            <text class="book-cate">{{item.author}}/{{item.category}}</text>
+            <view class="book-des" hover-class="none" hover-stop-propagation="false">
+                {{item.description}}
+            </view>
+        </view>
+    </scroll-view>
+</view>

@@ -1,0 +1,19 @@
+<view class="recommend-home">
+  <scroll-view scroll-y="true" bindscrolltolower="lodaMore" style="height:100%">
+    <view class="search">
+      <input placeholder="搜索你想要的书籍、作者" placeholder-class="search-placeholder" confirm-type="search" bindconfirm="search" />
+    </view>
+    <view wx:for="{{novelList}}" wx:key="{{item.bookname}}" class="recommend-item" bindtap="goDetail" data-book="{{item}}">
+      <image class="book-cover" src="{{item.coverImage}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload=""></image>
+      <view class="book-title">{{item.title}}</view>
+      <text class="book-cate">{{item.author}}/{{item.category}}</text>
+      <view class="book-des" hover-class="none" hover-stop-propagation="false">
+        {{item.description}}
+      </view>
+    </view>
+    <!-- <view class="empty" hover-class="none" hover-stop-propagation="false" wx:if="{{novelList.length==0}}"></view> -->
+    <view class="empty-remark" hover-class="none" hover-stop-propagation="false" wx:if="{{novelList.length==0}}">
+      没有找到相关的内容，换个关键字试试
+    </view>
+  </scroll-view>
+</view>

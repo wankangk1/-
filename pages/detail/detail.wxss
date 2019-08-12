@@ -1,0 +1,73 @@
+/* pages/detail.wxss */
+page {
+    background: #EEE;
+}
+
+.cover-container {
+    background: #42BD56;
+    text-align: center;
+    padding: 50rpx 0;
+}
+
+.cover-container image {
+    display: inline-block;
+    width: 300rpx;
+    height: 400rpx;
+}
+
+.book-meta {
+    position: relative;
+    padding: 20rpx;
+    overflow: hidden;
+}
+
+
+
+.book-meta .meta-info {
+    margin-right: 200rpx;
+}
+
+.meta-info text {
+    display: block
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 50rpx;
+}
+
+.other-meta {
+    padding-top: 10rpx;
+    color: #888;
+    font-size: 30rpx;
+}
+
+
+.book-intro {
+    padding: 0 20rpx 20rpx;
+    font-size: 40rpx;
+}
+
+.book-intro .intro-header {
+    line-height: 30px;
+}
+
+.book-intro .intro-content {
+    font-size: 35rpx;
+    line-height: 45rpx;
+    color: #888;
+
+}
+
+.over-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+
+.book-directory-length {
+    color: #ABA49A;
+    font-size: 12px;
+    font-weight: normal;
+}

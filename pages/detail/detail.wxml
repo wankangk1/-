@@ -1,0 +1,35 @@
+<view wx:if="{{!showloading}}">
+    <view class="cover-container" style="background-image:url({{bookDetail.coverImage}});background-repeat:no-repeat;background-size:cover">
+        <image src="{{bookDetail.coverImage}}"></image>
+    </view>
+    <view class="book-meta">
+        <view class="meta-info">
+            <view class="book-title">{{bookDetail.title}}</view>
+            <view class="other-meta">作者：{{bookDetail.author}}</view>
+        </view>
+    </view>
+    <view class="book-intro">
+        <view class="intro-header">
+            <view>内容简介</view>
+        </view>
+        <view class="intro-content" style="text-indent: 2em">{{bookDetail.description}}</view>
+    </view>
+    <view class="book-intro">
+        <view class="intro-header">
+            <view class="book-directory">
+                目录
+                <span class="book-directory-length" selectable="false" space="false" decode="false">
+                    (共{{catalog.length}}章)
+                </span>
+            </view>
+        </view>
+        <view class="intro-content">
+            <view class="" wx:for="{{bookCatalogue}}" wx:key="{{index}}" bindtap="goRead" data-nowread="{{index}}">
+                {{item.title}}
+            </view>
+        </view>
+    </view>
+    <view class="book-intro" hover-class="none" hover-stop-propagation="false">
+        <button bindtap="goRead" data-nowread="{{0}}" type="primary">立即阅读</button>
+    </view>
+</view>
